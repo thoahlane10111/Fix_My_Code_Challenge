@@ -1,0 +1,15 @@
+# Import necessary modules
+from flask import Flask, jsonify
+
+# Create Flask application
+app = Flask(__name__)
+
+# Define route for status endpoint
+@app.route('/api/v1/status', methods=['GET'])
+def get_status():
+    """Return a JSON response with the status information."""
+    return jsonify({'status': 'OK'})
+
+# Run the Flask application
+if __name__ == '__main__':
+    app.run(debug=True)
